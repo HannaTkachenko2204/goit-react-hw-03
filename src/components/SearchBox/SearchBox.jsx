@@ -1,14 +1,12 @@
-const SearchBox = ({input, handleInputChange}) => {
-    console.log(input);
+import css from "./SearchBox.module.css";
+
+const SearchBox = ({ input, handleInputChange }) => {
   return (
-      <>
-        <p>Find contacts by name</p>
-        <input type="text"
-      value={input}
-      onChange={handleInputChange} />
-      </>
-    );
-  };
-  
-  export default SearchBox;
-  
+    <>
+      <p className={css.nameOfInput}>Find contacts by name</p>
+      <input type="text" value={input} onChange={handleInputChange} />
+    </>
+  );
+};
+
+export default SearchBox;

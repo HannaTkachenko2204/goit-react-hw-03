@@ -2,14 +2,20 @@ import css from "./Contact.module.css";
 import { FaUser } from "react-icons/fa";
 import { MdLocalPhone } from "react-icons/md";
 
-const Contact = ({ name, number }) => {
+const Contact = ({ name, number, delCont }) => {
   return (
     <div className={css.item}>
       <div>
-        <p><FaUser/>{name}</p>
-        <p><MdLocalPhone/>{number}</p>
+        <p>
+          <FaUser />
+          {name}
+        </p>
+        <p>
+          <MdLocalPhone />
+          {number}
+        </p>
       </div>
-      <button>Delete</button>
+      <button onClick={delCont}>Delete</button>
     </div>
   );
 };
